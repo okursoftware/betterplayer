@@ -214,6 +214,7 @@ class _BetterPlayerState extends State<BetterPlayer>
   Future<dynamic> _pushFullScreenWidget(BuildContext context) async {
     final TransitionRoute<void> route = PageRouteBuilder<void>(
       settings: const RouteSettings(),
+      opaque: false,
       pageBuilder: _fullScreenRoutePageBuilder,
     );
 
