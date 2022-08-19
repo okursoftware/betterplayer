@@ -19,7 +19,7 @@ dependencies:
   meta: ^1.7.0
   flutter_widget_from_html_core: 
     git:
-      url: https://github.com/daohoangson/flutter_widget_from_html 
+      url: https://github.com/okursoftware/flutter_widget_from_html
       path: packages/core
   visibility_detector: ^0.3.3
   path_provider: ^2.0.10
