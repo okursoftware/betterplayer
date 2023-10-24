@@ -27,7 +27,7 @@ class _NormalPlayerPageState extends State<NormalPlayerPage> {
     );
     _betterPlayerDataSource = BetterPlayerDataSource(
       BetterPlayerDataSourceType.network,
-      Constants.forBiggerBlazesUrl,
+        "https://video.piri.net/piri/upload/3/2023/10/24/611d4e2f-bahceli-yola-revan-lmazsam-namerdim/611d4e2f-bahceli-yola-revan-lmazsam-namerdim.m3u8",
     );
     _betterPlayerController = BetterPlayerController(betterPlayerConfiguration);
     _betterPlayerController.setupDataSource(_betterPlayerDataSource);

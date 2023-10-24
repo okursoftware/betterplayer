@@ -28,7 +28,7 @@ class _BasicPlayerPageState extends State<BasicPlayerPage> {
           AspectRatio(
             aspectRatio: 16 / 9,
             child: BetterPlayer.network(
-              Constants.forBiggerBlazesUrl,
+                "https://video.piri.net/piri/upload/3/2023/10/24/611d4e2f-bahceli-yola-revan-lmazsam-namerdim/611d4e2f-bahceli-yola-revan-lmazsam-namerdim.m3u8"
             ),
           ),
           Padding(
