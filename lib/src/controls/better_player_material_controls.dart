@@ -380,20 +380,23 @@ class _BetterPlayerMaterialControlsState
       height: double.infinity,
       child: _betterPlayerController?.isLiveStream() == true
           ? const SizedBox()
-          : Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                if (_controlsConfiguration.enableSkips)
-                  Expanded(child: _buildSkipButton())
-                else
-                  const SizedBox(),
-                Expanded(child: _buildReplayButton(_controller!)),
-                if (_controlsConfiguration.enableSkips)
-                  Expanded(child: _buildForwardButton())
-                else
-                  const SizedBox(),
-              ],
-            ),
+          : Center(
+            child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  if (_controlsConfiguration.enableSkips)
+                    Expanded(child: _buildSkipButton())
+                  else
+                    const SizedBox(),
+                  _buildReplayButton(_controller!),
+                  if (_controlsConfiguration.enableSkips)
+                    Expanded(child: _buildForwardButton())
+                  else
+                    const SizedBox(),
+                ],
+              ),
+          ),
     );
   }
 

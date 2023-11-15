@@ -16,14 +16,35 @@ class _NormalPlayerPageState extends State<NormalPlayerPage> {
   void initState() {
     BetterPlayerConfiguration betterPlayerConfiguration =
         BetterPlayerConfiguration(
-      aspectRatio: 16 / 9,
-      fit: BoxFit.contain,
-      autoPlay: true,
-      looping: true,
-      deviceOrientationsAfterFullScreen: [
-        DeviceOrientation.portraitDown,
-        DeviceOrientation.portraitUp
-      ],
+          autoPlay: true,
+          controlsConfiguration: BetterPlayerControlsConfiguration(
+            enableOverflowMenu: false,
+            playerTheme: BetterPlayerTheme.material,
+            enablePlayPause: false,
+            enableSkips: false,
+            showControls: true,
+            showControlsOnInitialize: true,
+            controlBarColor: Colors.transparent,
+          ),
+          systemOverlaysAfterFullScreen: [
+            SystemUiOverlay.bottom,
+            SystemUiOverlay.top,
+          ],
+          deviceOrientationsAfterFullScreen: [
+            DeviceOrientation.portraitUp,
+            DeviceOrientation.portraitDown,
+          ],
+          fit: BoxFit.fill,
+          deviceOrientationsOnFullScreen: [
+            DeviceOrientation.portraitUp,
+            DeviceOrientation.portraitDown,
+            DeviceOrientation.landscapeLeft,
+            DeviceOrientation.landscapeRight,
+          ],
+          showPlaceholderUntilPlay: true,
+          aspectRatio: 16/9,
+          autoDetectFullscreenAspectRatio: true,
+          handleLifecycle: true,
     );
     _betterPlayerDataSource = BetterPlayerDataSource(
       BetterPlayerDataSourceType.network,
